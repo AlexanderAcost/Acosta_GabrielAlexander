@@ -2,11 +2,12 @@
 @section('contenido')
     
 <br>
-    <h1 class="text-center">Lista de  Libros</h1>
+    <h1 class="text-center fw-bold">Lista de  Libros</h1>
     <br>
-    <div class="text-end">
+    <div class="text-center">
     <a href="{{url('libro/registro')}}"  class="btn btn-success">Registrar Nuevo Libro</a> 
     </div>
+    <br>
     <div class="container">
         <table class="table table-bordered table-hover table-striped">
             <thead class="table-dark">

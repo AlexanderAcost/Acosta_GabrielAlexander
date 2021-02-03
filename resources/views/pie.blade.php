@@ -2,9 +2,9 @@
   
     <div class ="cuerpo " >
         <div class="col1">
-            <h1 class="fw-bold letras ">Alex </h1>
-            <p class="letras fw-bold" >Horario de Atención:  Lunes a Jueves 8:00 am – 2:00 pm </p>
-            <p class="letras fw-bold">  Viernes Jornada Continua 7:00 a.m a 3:00 p.m</p>
+            <h1 class="fw-bold letras ">Alexander Acosta </h1>
+            <p class="letras fw-bold" > Seminario De Computacion Parcial Final </p>
+            <p class="letras fw-bold">  Ingenieria De Sistemas</p>
         </div>
         <div class="col2">
             <h1 class="fw-bold letras">Redes Sociales</h1>
@@ -24,12 +24,12 @@
         <div class="col3">
             <h1 class="fw-bold letras">Sedes</h1>
             <ul>
-                <li><a class="letras fw-bold" href="">Sede Principal</a></li>
-                <li> <a class="letras fw-bold" href="">Edificio Pasto</a></li>
+                <li><a class="letras fw-bold" href="">Sede Pasto</a></li>
+                <li> <a class="letras fw-bold" href="">Edificio Tuquerres</a></li>
                 <li><a class="letras fw-bold" href="">Edificio Ipiales</a></li>
                 <div class="row">
                     <div class="col">
-                        <li class="letras fw-bold"> Contacto: 3112345678</li>
+                        <li class="letras fw-bold"> Contacto: 3205926652</li>
                     </div>
                     <div class="col">
                         <a href=""><img src='{{url("/imagenes/telf.png")}}' width="100" alt=""></a>

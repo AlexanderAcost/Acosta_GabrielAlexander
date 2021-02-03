@@ -11,7 +11,8 @@ use App\Models\Mlibro;
 class LibroController extends Controller
 {
     public function formregistro (){
-        $editoriales = DB::table('editorial')->get();
+        $editoriales = Meditorial::all();
+        // $editoriales = DB::table('editorial')->get(); Ese mas rapido para consultas
         return view('Libro.vformregistro', ['editoriales' => $editoriales]);
     }
     public function registro (Request $request){

@@ -1,7 +1,7 @@
 @extends('principal')
 @section('contenido')
     
-<h1 class="text-center">Formulario De Registro Libro</h1>
+<h1 class="text-center fw-bold">Formulario De Registro Libro</h1>
 
     <div class="container"> 
     <form action="{{url('libro/registro')}}" method="POST" >

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg  fixed-top navbar-dark bg-secondary">   
   <div class="container-fluid">
     <a class="navbar-brand active" href="{{url('/')}}">
-        <img src='{{url("/imagenes/logo.png")}}' alt="" width="70" height="70" >
+        <img src='{{url("/imagenes/logo1.png")}}' alt="" width="70" height="70" >
         LIBRERIA NACIONAL
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

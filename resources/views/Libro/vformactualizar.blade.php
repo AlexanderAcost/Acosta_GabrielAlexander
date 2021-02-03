@@ -2,7 +2,7 @@
 @section('contenido')
     
      
-<h1 class="text-center">Formulario Edicion Libro</h1>
+<h1 class="text-center fw-bold">Formulario Edicion Libro</h1>
 
 
 
