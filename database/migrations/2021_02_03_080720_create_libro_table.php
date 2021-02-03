@@ -20,8 +20,8 @@ class CreateLibroTable extends Migration
             $table->float('precio');
             $table->integer('stock');  
 
-            $table->unsignedBigInteger('editorial');              
-            $table->foreign('editorial')->references('id')->on('editorial');
+            $table->unsignedBigInteger('editorial_fk');              
+            $table->foreign('editorial_fk')->references('id')->on('editorial');
 
             $table->timestamps();
 
