@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
-use App\Model\Meditorial;
-use App\Model\Mlibro;
+use App\Models\Meditorial;
+use App\Models\Mlibro;
 
 class LibroController extends Controller
 {
@@ -30,7 +30,7 @@ class LibroController extends Controller
                     ->select('lib.id','lib.ISBN','lib.titulo','lib.precio','lib.stock','lib.editorial_fk','edit.nombre',)
                     ->orderBy('lib.id', 'asc')
                     ->get();
-        return view('Libro.vlistalibro', ['libros' => $libros]);
+        return view('Libro.vlistarlibro', ['libros' => $libros]);
 
     }
     public function formeditar ($idlibro){
@@ -38,8 +38,8 @@ class LibroController extends Controller
         $editorial = Meditorial::all();
         return view('Libro.vformactualizar', compact('libro','editorial'));
     }
-    public function editar (Request $request, $idlibro){
-        $libro = Mlibro::findOrFail($idlibro);
+    public function editar (Request $request,$id){
+        $libro = Mlibro::findOrFail($id);
         $libro->ISBN = $request->input('isbn');
         $libro->titulo = $request->input('titulo');
         $libro->precio = $request->input('precio');

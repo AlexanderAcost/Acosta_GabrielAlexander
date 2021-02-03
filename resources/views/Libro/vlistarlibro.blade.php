@@ -30,22 +30,25 @@
                 <td> {{$l->titulo}}</td>
                 <td> {{$l->stock}}</td>
 
-                if({{$l->stock}} == 0){
-                    <td> Agotado</td>
-                }
-                if({{$l->stock}} > 0 && {{$l->stock}} <= 10 ){
-                    <td> Ultimas Unidades</td>
-                }
-                if({{$l->stock}} > 10 ){
-                    <td> Disponible</td>
-                }
+                @if($l->stock == 0)
+                    <td> Agotado</td>               
+                @endif
+                @if($l->stock > 0 && $l->stock <= 10 )
+                    <td> Ultimas Unidades</td>                
+                @endif
+                @if($l->stock > 10 )
+                    <td> Disponible</td>                            
+                @endif
 
                 <td> {{$l->nombre}}</td> 
                 <td> {{$l->precio}}</td> 
 
-                if({{$l->nombre}} == "Norma"  || {{$l->nombre}} == "La Santillana"){                  
-                    <td> descuento</td>
-                }
+                @if($l->nombre == "Norma"  || $l->nombre == "La Santillana")
+                    @php($descuento = ($l->precio)*0.05)       
+                    <td> {{$descuento}}</td>              
+                @else
+                    <td>0</td>           
+                @endif
 
                 
                 <td> 

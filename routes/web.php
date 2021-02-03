@@ -25,6 +25,6 @@ Route::POST('libro/registro',[LibroController::class, 'registro']);
 Route::get('libro/lista',[LibroController::class, 'listar']);
 
 Route::get('libro/editar/{idlibro}',[LibroController::class, 'formeditar'])->name('formeditarlibro'); 
-Route::POST('libro/editar',[LibroController::class, 'editar'])->name('editarlibro');
+Route::POST('libro/editar{id}',[LibroController::class, 'editar'])->name('editarlibro');
 
 Route::get('editorial/lista',[EditorialController::class, 'listar']);
