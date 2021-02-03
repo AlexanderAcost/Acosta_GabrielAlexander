@@ -1,0 +1,67 @@
+/* Estilos del pie */
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+  }
+.abajo{
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    
+}
+.pie{
+    background: rgb(89, 102, 128);
+    color:rgb(7, 7, 7);
+    font-weight: bold;
+    font-size: 15px;
+}
+.letras {
+    background-image: linear-gradient(90deg, transparent 4%, rgba(255, 255, 255, .6) 5%, rgba(255, 255, 255, .6) 5%, transparent 90%);
+    text-align: center;
+    padding: 0 10%;
+}
+
+.cuerpo{
+    width: 100%;
+    display: flex;
+    background-repeat:no-repeat;
+    background-image:url(../imagenes/pie.png),linear-gradient(to bottom right, rgba(0, 0, 5, 0.39) , rgba(252, 252, 252, 0.253));  
+    padding: 10px 10px 0px 10px;
+}
+
+.col1{
+    width: 40%;
+}
+.col2{
+    width: 30%;
+}
+.fila{
+    margin-top: 5px;
+}
+
+.fila img{
+    width: 50px;
+    height: 50px;
+}
+
+.col3{
+    width: 20%;
+}
+.col3 ul li{
+    margin-top: 5px;
+}
+.col3 ul li a{
+    color:rgb(0, 40, 114);
+}
+.botones{
+    background: rgb(8, 8, 41);
+    width: 100%;
+    padding: 5px;
+    color: lavender;
+    text-align: center; 
+    font-size: 12px;
+}
+
+/* ESTILOS DE BARRA */
+
