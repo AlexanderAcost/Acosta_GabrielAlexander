@@ -2,8 +2,11 @@
 @section('contenido')
     
 <br>
-    <h1 class="text-center">Lista de  Editorial</h1>
+    <h1 class="text-center">Lista de  Libros</h1>
     <br>
+    <div class="text-end">
+    <a href="{{url('libro/registro')}}"  class="btn btn-success">Registrar Nuevo Libro</a> 
+    </div>
     <div class="container">
         <table class="table table-bordered table-hover table-striped">
             <thead class="table-dark">
@@ -26,15 +29,27 @@
                 <td> {{$l->ISBN}}</td>
                 <td> {{$l->titulo}}</td>
                 <td> {{$l->stock}}</td>
-                
-                <td> estado</td>
 
-                <td> {{$l->editorial_fk}}</td> 
+                if({{$l->stock}} == 0){
+                    <td> Agotado</td>
+                }
+                if({{$l->stock}} > 0 && {{$l->stock}} <= 10 ){
+                    <td> Ultimas Unidades</td>
+                }
+                if({{$l->stock}} > 10 ){
+                    <td> Disponible</td>
+                }
+
+                <td> {{$l->nombre}}</td> 
                 <td> {{$l->precio}}</td> 
 
-                <td> descuento</td>
+                if({{$l->nombre}} == "Norma"  || {{$l->nombre}} == "La Santillana"){                  
+                    <td> descuento</td>
+                }
+
+                
                 <td> 
-                <a href="{{route('editarlibro', $l->id)}}"  class="btn btn-success">Editar</a> 
+                <a href="{{route('formeditarlibro', $l->id)}}"  class="btn btn-success">Editar</a> 
                 </td>
                 </tr>
                 @endforeach

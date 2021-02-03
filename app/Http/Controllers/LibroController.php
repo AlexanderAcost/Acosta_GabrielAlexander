@@ -27,7 +27,7 @@ class LibroController extends Controller
     public function listar (){
         $libros = DB::table('libro as lib')
                     ->join('editorial as edit', 'lib.editorial_fk', '=', 'edit.id')
-                    ->select('lib.id','lib.ISBN','lib.titulo','lib.precio','lib.stock','edit.nombre',)
+                    ->select('lib.id','lib.ISBN','lib.titulo','lib.precio','lib.stock','lib.editorial_fk','edit.nombre',)
                     ->orderBy('lib.id', 'asc')
                     ->get();
         return view('Libro.vlistalibro', ['libros' => $libros]);
@@ -38,7 +38,14 @@ class LibroController extends Controller
         $editorial = Meditorial::all();
         return view('Libro.vformactualizar', compact('libro','editorial'));
     }
-    public function editar (){
-
+    public function editar (Request $request, $idlibro){
+        $libro = Mlibro::findOrFail($idlibro);
+        $libro->ISBN = $request->input('isbn');
+        $libro->titulo = $request->input('titulo');
+        $libro->precio = $request->input('precio');
+        $libro->stock = $request->input('cantidad');
+        $libro->editorial_fk = $request->input('editorial');
+        $libro->save();
+        return redirect('libro/lista');
     }
 }
